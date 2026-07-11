@@ -1,0 +1,5 @@
+vastre_backend/.venv/
+vastre_backend/.env
+vastre_backend/__pycache__/
+**/__pycache__/
+*.py[cod]
