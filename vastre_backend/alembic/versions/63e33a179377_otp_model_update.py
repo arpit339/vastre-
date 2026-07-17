@@ -1,8 +1,8 @@
-"""user table created
+"""otp model update
 
-Revision ID: b4dde08a49e3
+Revision ID: 63e33a179377
 Revises: 
-Create Date: 2026-07-11 04:32:45.782415
+Create Date: 2026-07-17 14:14:44.195921
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'b4dde08a49e3'
+revision: str = '63e33a179377'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -25,12 +25,13 @@ def upgrade() -> None:
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('user_name', sa.String(length=100), nullable=False),
     sa.Column('email', sa.String(length=100), nullable=False),
-    sa.Column('password', sa.String(length=100), nullable=False),
     sa.Column('contact', sa.String(length=100), nullable=False),
-    sa.Column('is_actice', sa.Boolean(), nullable=False),
+    sa.Column('is_active', sa.Boolean(), nullable=False),
+    sa.Column('is_verified', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('update_at', sa.DateTime(), nullable=False),
-    sa.PrimaryKeyConstraint('user_id')
+    sa.PrimaryKeyConstraint('user_id'),
+    sa.UniqueConstraint('email')
     )
     # ### end Alembic commands ###
 

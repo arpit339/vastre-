@@ -1,9 +1,9 @@
-SQLAlchemy        2.0.51
-alembic           1.18.5
-pydantic          2.13.4
-asyncpg           0.31.0
-fastapi           0.139.0
-uvicorn           0.50.0
-argon2-cffi          25.1.0
-python-dotenv        1.2.2
-jose                 1.0.0
+fastapi==0.139.0
+uvicorn==0.50.0
+sqlalchemy==2.0.51
+alembic==1.18.5
+asyncpg==0.31.0
+pydantic==2.13.4
+python-dotenv==1.2.2
+python-jose==3.5.0
+argon2-cffi==25.1.0
