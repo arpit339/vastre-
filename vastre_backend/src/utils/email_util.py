@@ -29,8 +29,8 @@ def generate_otp(user_email):
     server.send_message(msg)
     print("email sent")
     return otp
-
-def verify_otp(user_otp , otp):
-    if otp == user_otp:
-        return True
-    return None
+#
+# def verify_otp(user_otp , otp):
+#     if otp == user_otp:
+#         return True
+#     return None

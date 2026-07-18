@@ -7,3 +7,5 @@ pydantic==2.13.4
 python-dotenv==1.2.2
 python-jose==3.5.0
 argon2-cffi==25.1.0
+
+argon2
