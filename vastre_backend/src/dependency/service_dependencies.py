@@ -1,10 +1,12 @@
 from fastapi import Depends
 
-from src.dependency.repository_dependencies import get_otp_repository, get_user_repository
+from src.dependency.repository_dependencies import get_otp_repository, get_user_repository,get_category_repository
 from src.repository.otp_repository import OtpRepository
 from src.repository.user_repository import UserRepository
+from src.repository.category_repository import CategoryRepo
 from src.service.otp_service import OtpService
 from src.service.user_service import UserService
+from src.service.category_service import CategoryService
 
 
 def get_otp_service(otp_repo: OtpRepository=Depends(get_otp_repository)):
@@ -12,3 +14,6 @@ def get_otp_service(otp_repo: OtpRepository=Depends(get_otp_repository)):
 
 def get_user_service(user_repo: UserRepository=Depends(get_user_repository)):
     return UserService(user_repo)
+
+def get_category_service(category_repo : CategoryRepo = Depends(get_category_repository)):
+    return CategoryService(category_repo)
